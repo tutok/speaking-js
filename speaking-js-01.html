@@ -1,28 +1,10 @@
 <html>
-	<head></head>
+	<head>
+		<script src="strict.js"></script>
+	</head>
 	<body>
 		<script>
-			function slopyFunction() {
-				console.log(this == window);
-			}
 
-			function strictFunction(){
-				'use strict';
-
-				console.log(this === undefined);
-			}
-			
-			
-			function Point(x, y){
-			'use strict'	 
-				
-				this.x = {
-					get: function() { return x; },
-					set: function(value) { x = value; } 
-					  }
-				this.y = y;				
-			}
-			
 			var jane = {};
 			Object.defineProperty(jane, 'canBeDeleted', {
 				value: 123,
